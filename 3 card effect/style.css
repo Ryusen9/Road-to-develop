@@ -119,3 +119,102 @@ body{
 }
 
 
+/* card3 strats here */
+
+#card3{
+    height: 25rem;
+    width: 25rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#card3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+.content3{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 15px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    background-color: #b2a6be;
+    color: #fee9ce;
+}
+
+.content3 h2{
+    text-transform: uppercase;
+}
+
+.content3 p{
+    width: 80%;
+    margin: 20px auto;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0;
+}
+
+a{
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1 rem;
+    border: 2px solid #fee9ce;
+    color: #fee9ce;
+    overflow: hidden;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+a:before{
+    content: "DOWNLOAD";
+    position: absolute;
+    color: #fee9ce;
+    font-weight: bold;
+    font-size: 1rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #555184;
+    transform: translateY(-100%);
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a:hover:before{
+    transform: translateY(0);
+}
+
+#card3:hover .content3{
+    height: 100%;
+    width: 100%;
+    left: 0;
+}
+
+#card3:hover p,
+#card3:hover .btn{
+    opacity: 1;
+    transition-delay: 0.5s;
+}
