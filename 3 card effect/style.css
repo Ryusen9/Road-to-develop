@@ -22,8 +22,8 @@ body{
 }
 
 #card1{
-    height: 30rem;
-    width: 30rem;
+    height: 25rem;
+    width: 25rem;
     overflow: hidden;
     position: relative;
     cursor: pointer;
@@ -31,7 +31,12 @@ body{
 
 #card1 img{
     width: 100%;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
+}
+
+#card1 img:hover{
+    transform: translateY(100%);
+    transition-delay: 0.2s ;
 }
 
 .content1{
@@ -63,4 +68,54 @@ body{
 #card1:hover .content1{
     transform: translateY(0);
 }
+
+/* card effect 2 */
+
+#card2{
+    width: 25rem;
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#card2 img{
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.content2{
+    position: absolute;
+    padding: 20px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: #555184;
+    color: #fee9ce;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(100%);
+}
+
+.content2 h2{
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.content2 p{
+    text-align: center;
+}
+
+#card2:hover .content2{
+    transform: translateY(0);
+}
+
+#card2:hover img{
+    transform: translateY(-30%);
+}
+
 
